@@ -1,0 +1,30 @@
+{
+  "name": "traduire-offline",
+  "version": "1.0.0",
+  "description": "Offline French <-> English translator. Runs Bergamot translation models on your own computer with the QVAC SDK: no API key, no cloud, your text never leaves your machine.",
+  "type": "module",
+  "main": "src/server.js",
+  "bin": {
+    "traduire": "src/cli.js"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "cli": "node src/cli.js"
+  },
+  "engines": {
+    "node": ">=22.17"
+  },
+  "keywords": [
+    "qvac",
+    "translation",
+    "offline",
+    "french",
+    "english",
+    "bergamot",
+    "local-ai"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@qvac/sdk": "^0.20.0"
+  }
+}
