@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Traduire Offline</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Traduire Offline</h1>
+      <p class="sub">French ⇄ English translation that runs on your own computer. No account, no API key, no cloud.</p>
+      <p id="status" class="status loading">Loading translation models…</p>
+    </header>
+
+    <section class="bar">
+      <label for="direction">Direction</label>
+      <select id="direction">
+        <option value="auto">Detect language</option>
+        <option value="fr-en">French → English</option>
+        <option value="en-fr">English → French</option>
+      </select>
+      <button id="swap" type="button" title="Use the translation as the new input">⇅ Swap</button>
+    </section>
+
+    <section class="panes">
+      <div class="pane">
+        <textarea id="input" maxlength="5000" placeholder="Tapez ou collez votre texte… / Type or paste your text…"></textarea>
+        <div class="meta"><span id="count">0 / 5000</span><button id="go" type="button">Translate</button></div>
+      </div>
+      <div class="pane">
+        <div id="output" class="output" aria-live="polite"></div>
+        <div class="meta"><span id="info"></span><button id="copy" type="button">Copy</button></div>
+      </div>
+    </section>
+
+    <footer>Powered by the <a href="https://github.com/tetherto/qvac">QVAC SDK</a> with Bergamot models. Your text never leaves this device.</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
